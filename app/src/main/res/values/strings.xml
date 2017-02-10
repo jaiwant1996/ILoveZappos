@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ILoveZappos</string>
+    <string name="buttonText">Search</string>
+    <string name="textHint">Search..</string>
+</resources>
