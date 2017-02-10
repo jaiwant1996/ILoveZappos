@@ -1,88 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
-    <data class="itemBinding">
-        <import type="edu.msu.bhushanj.ilovezappos.MainActivity">
 
-        </import>
-    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="edu.msu.bhushanj.ilovezappos.MainActivity"
+    android:layout_gravity="center"
+    android:weightSum="1">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/activity_main"
+    <EditText
+        android:maxLines="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/textHint"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:textAlignment="center"
+        android:layout_marginStart="16dp"
+        android:singleLine="true"
+        android:textStyle="normal|italic" />
+
+    <Button
+        android:text="@string/buttonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_marginEnd="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        tools:context="edu.msu.bhushanj.ilovezappos.MainActivity"
-        android:layout_gravity="center"
-        android:weightSum="1">
+        app:srcCompat="@android:drawable/alert_dark_frame"
+        android:id="@+id/imageView"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignTop="@+id/itemBrand"
+        android:layout_centerHorizontal="true" />
 
-        <EditText
-            android:maxLines="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/textHint"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:textAlignment="center"
-            android:layout_marginStart="16dp"
-            android:singleLine="true"
-            android:textStyle="normal|italic" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:id="@+id/itemBrand"
+        android:textSize="18sp"
+        android:layout_below="@+id/button"
+        android:layout_alignEnd="@+id/imageView"
+        android:textAlignment="center" />
 
-        <Button
-            android:text="@string/buttonText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button"
-            android:layout_marginEnd="14dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            style="@style/Widget.AppCompat.Button.Colored" />
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="3"
+        android:minLines="2"
+        android:id="@+id/itemName"
+        android:layout_below="@+id/itemBrand"
+        android:layout_alignEnd="@+id/imageView"
+        android:paddingTop="3dp" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@android:drawable/alert_dark_frame"
-            android:id="@+id/imageView"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_alignTop="@+id/itemBrand"
-            android:layout_centerHorizontal="true" />
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemPrice"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
 
-        <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:id="@+id/itemBrand"
-            android:textSize="18sp"
-            android:layout_below="@+id/button"
-            android:layout_alignEnd="@+id/imageView"
-            android:textAlignment="center" />
-
-        <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:maxLines="3"
-            android:minLines="2"
-            android:id="@+id/itemName"
-            android:layout_below="@+id/itemBrand"
-            android:layout_alignEnd="@+id/imageView"
-            android:paddingTop="3dp" />
-
-        <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/itemPrice"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:layout_alignTop="@+id/imageView"
-            android:layout_alignStart="@+id/imageView" />
-
-    </RelativeLayout>
-</layout>
+</RelativeLayout>
